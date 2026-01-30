@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prompt Manager
+
+> **⚠️ Work In Progress** - This project is currently under active development.
+
+A modern prompt management application built with Next.js, emphasizing clean architecture, SOLID principles, and comprehensive testing practices.
+
+## About
+
+This project demonstrates professional React development with a focus on maintainability, testability, and architectural excellence:
+
+### Core Technologies
+
+- **Next.js 15+** leveraging React Server Components and Client Components
+- **React Hook Form** for robust form validation and state management
+- **Framer Motion** for smooth, performant animations
+- **TypeScript** for type-safe development
+- **Tailwind CSS** with automatic class sorting via Biome
+- **Biome** for lightning-fast linting and formatting
+
+### Architecture & Practices
+
+- **Clean Architecture** for clear separation of concerns and maintainability
+- **SOLID Principles** applied throughout the codebase
+- **Design Patterns** for scalable and reusable solutions
+- **Comprehensive Testing** strategy covering unit, integration, and E2E tests
+- **Git workflow** with VCS integration for team collaboration
+
+The codebase enforces strict code quality standards with 80-character line width, consistent 2-space indentation, and comprehensive linting rules optimized for React and Next.js development.
 
 ## Getting Started
 
