@@ -27,9 +27,67 @@ This project demonstrates professional React development with a focus on maintai
 
 The codebase enforces strict code quality standards with 80-character line width, consistent 2-space indentation, and comprehensive linting rules optimized for React and Next.js development.
 
+## Prerequisites
+
+- Node.js 18+ or Bun
+- Docker and Docker Compose
+- Git
+
 ## Getting Started
 
-First, run the development server:
+### 1. Clone and Install
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd prompt-manager
+
+# Install dependencies
+npm install
+# or
+bun install
+```
+
+### 2. Environment Setup
+
+```bash
+# Copy the environment template
+cp .env.example .env
+
+# Edit .env with your configuration if needed
+```
+
+### 3. Database Setup
+
+Start the PostgreSQL database using Docker:
+
+```bash
+# Start PostgreSQL container
+docker-compose up -d
+
+# Check container status
+docker-compose ps
+
+# View logs
+docker-compose logs -f postgres
+```
+
+The database will be available at `localhost:5432` with the credentials from your `.env` file.
+
+### 4. Database Migration
+
+```bash
+# Generate Prisma Client
+npx prisma generate
+
+# Run migrations
+npx prisma migrate dev
+
+# Optional: Seed the database
+npx prisma db seed
+```
+
+### 5. Run Development Server
 
 ```bash
 npm run dev
@@ -41,11 +99,51 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 6. Code Quality
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Run linter
+npm run lint
+
+# Format code
+npm run format
+
+# Run type checking
+npm run type-check
+```
+
+## Project Structure
+
+```
+prompt-manager/
+├── app/              # Next.js App Router pages and layouts
+├── components/       # React components (Server & Client)
+├── lib/             # Shared utilities and helpers
+├── prisma/          # Database schema and migrations
+├── public/          # Static assets
+└── tests/           # Test files
+```
+
+## Docker Commands
+
+```bash
+# Start services
+docker-compose up -d
+
+# Stop services
+docker-compose down
+
+# Stop and remove volumes (⚠️ deletes data)
+docker-compose down -v
+
+# Restart services
+docker-compose restart
+
+# View logs
+docker-compose logs -f postgres
+```
 
 ## Learn More
 
