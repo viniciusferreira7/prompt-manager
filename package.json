@@ -9,7 +9,10 @@
     "lint": "biome check",
     "format": "biome format --write",
     "check:fix": "biome check --write",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@prisma/client": "^7.3.0",
