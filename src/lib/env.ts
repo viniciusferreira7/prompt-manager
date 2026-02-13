@@ -10,9 +10,7 @@ const envSchema = z.object({
     .enum(["development", "production", "test"])
     .default("development"),
 
-  DATABASE_URL: z
-    .url()
-    .describe("PostgreSQL connection string for Prisma"),
+  DATABASE_URL: z.url().describe("PostgreSQL connection string for Prisma"),
   POSTGRES_USER: z.string().min(1).default("postgres"),
   POSTGRES_PASSWORD: z.string().min(1).default("postgres"),
   POSTGRES_DB: z.string().min(1).default("prompt_manager"),
@@ -20,7 +18,6 @@ const envSchema = z.object({
   POSTGRES_HOST: z.string().min(1).default("localhost"),
 
   NEXT_PUBLIC_APP_URL: z.string().url().default("http://localhost:3000"),
-
 });
 
 /**
